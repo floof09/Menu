@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #ffcc00; /* McDonald's golden arches color */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif; /* Bold font for headers */
+}
+
+main {
+    padding: 20px;
+    transition: padding 0.3s ease;
+}
+
+p {
+    text-align: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover {
+    background-color: #f5f5f5; /* Lighter background on hover */
+    transform: translateY(-5px); /* Move item slightly up on hover */
+}
+
+.item h3 {
+    margin-top: 0;
+}
+
+.item p {
+    margin-bottom: 10px;
+}
+
+.item:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+}
+.item img {
+    width: 100%; /* Make the image fill the width of its container */
+    border-radius: 10px 10px 0 0; /* Round the top corners */
+}
+
+.item .description {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    transition: bottom 0.3s ease;
+}
+
+.item:hover .description {
+    bottom: 0;
+}
+
+.selected {
+    width: 50%; /* Decrease width */
+    height: 50%; /* Decrease height */
+    position: absolute;
+    top: 15%; /* Adjust position */
+    left: 15%; /* Adjust position */
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    display: flex; /* Use flexbox */
+    flex-direction: row-reverse; /* Reverse the direction to place text on the right */
+    align-items: center; /* Center items vertically */
+}
+
+
+.selected img {
+    width: 50%;
+}
+
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #004080; /* Dark blue background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #003366; /* Darker blue on hover */
+}
+
+
+.selected img {
+    width: 40%; /* Adjust image width */
+    border-radius: 10px; /* Remove specific border-radius */
+}
+
+.selected .text {
+    flex-grow: 1; /* Allow text to grow and fill remaining space */
+}
+
+.selected h3 {
+    margin-top: 10px; /* Add space between image and text */
+}
